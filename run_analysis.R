@@ -98,5 +98,5 @@ melt_data = melt(data, id.vars = id_labels, measure.vars = data_labels)
 tidy_set = dcast(melt_data, subject + activity_label ~ variable, mean)
 
 # write the tidy data set into ./tidy_set.txt
-write.table(tidy_set, file = "./tidy_set.txt")
+write.table(tidy_set, file = "./tidy_set.txt", row.names = FALSE)
 message("Tidy data set successfully created in ./tidy_set.txt")
